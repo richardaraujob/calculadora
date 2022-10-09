@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="calculator">
+        <div id="operation"></div>
+        <div id="result"></div>
+        <div id="container-buttons">
+            <button class="button green" onclick="clearOperation()">AC</button>
+            <button class="button green">C</button>
+            <button class="button green" onclick="clickNumber('%')">%</button>
+            <button class="button red" onclick="clickNumber('/')">/</button>
+            <button class="number button" onclick="clickNumber(7)">7</button>
+            <button class="number button" onclick="clickNumber(8)">8</button>
+            <button class="number button" onclick="clickNumber(9)">9</button>
+            <button class="button red" onclick="clickNumber('*')">X</button>
+            <button class="number button" onclick="clickNumber(4)">4</button>
+            <button class="number button" onclick="clickNumber(5)">5</button>
+            <button class="number button" onclick="clickNumber(6)">6</button>
+            <button class="button red" onclick="clickNumber('-')">-</button>
+            <button class="number button" onclick="clickNumber(1)">1</button>
+            <button class="number button" onclick="clickNumber(2)">2</button>
+            <button class="number button" onclick="clickNumber(3)">3</button>
+            <button class="button red" onclick="clickNumber('+')">+</button>
+            <button class="button">C</button>
+            <button class="number button" onclick="clickNumber(0)">0</button>
+            <button class="button" onclick="clickNumber('.')">.</button>
+            <button class="button red" onclick="calculo()">=</button>
+        </div>
+    </div>
+</body>
+<script src="/main.js"></script>
+</html>
