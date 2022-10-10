@@ -175,3 +175,59 @@ body.light {
 #operation.light, #result.light {
     color: #292D36;
 }
+
+#container-porcentagem {
+    position: absolute;
+    width: 260px;
+    height: 220px;
+    background-color: #292D36;
+    gap: 5px;
+}
+
+#container-porcentagem.light {
+    background-color: #F9F9F9;
+    color: #292D36;
+}
+
+#button-back {
+    background-color: #292D36;
+    border: none;
+    cursor: pointer;
+}
+
+#button-back.light {
+    background-color: #F9F9F9;
+}
+
+#button-back svg path:last-child {
+    fill: #FFFFFF;
+}
+
+#button-back.light svg path:last-child {
+    fill: #292D36;
+}
+
+#container-porcentagem form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    color: #FFFFFF;
+}
+
+#container-porcentagem form input {
+    width: 25%;
+    outline: none;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 20px; 
+}
+
+#container-porcentagem.light form input {
+    background-color: #292D36;
+    color: #FFFFFF;
+}
+
+#container-porcentagem form button {
+    width: 100%;
+}
