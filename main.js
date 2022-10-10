@@ -42,8 +42,30 @@ check.addEventListener("click", () => {
     document.querySelector("#result").classList.toggle("light");
     document.querySelector(".label").classList.toggle("light");
     document.querySelector(".ball").classList.toggle("light");
+    document.querySelector("#container-porcentagem").classList.toggle("light");
+    document.querySelector("#button-back").classList.toggle("light");
 
     document.querySelectorAll(".button").forEach(function(button) { 
         button.classList.toggle("light");
     });
 } );
+
+const buttonPorcentagem = document.querySelector("#button-porcentagem");
+
+buttonPorcentagem.addEventListener("click", () => {
+    document.querySelector("#container-porcentagem").removeAttribute("hidden");
+});
+
+const buttonBack = document.querySelector("#button-back");
+
+buttonBack.addEventListener("click", () => {
+    document.querySelector("#container-porcentagem").setAttribute("hidden", "hidden");
+});
+
+const porcentagem = document.querySelector("#porcentagem");
+const valor = document.querySelector("#valor");
+
+function calculoPorcentagem() {
+    const resultPorcentagem =  Number(porcentagem.value) * Number(valor.value) / 100;
+    result.innerHTML = resultPorcentagem;
+};
