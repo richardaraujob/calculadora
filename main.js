@@ -1,5 +1,11 @@
 const operation = document.querySelector("#operation");
 const result = document.querySelector("#result");
+let history = {};
+
+function restore() {
+    operation.innerHTML = history.operation;
+    result.innerHTML = history.result;
+};
 
 function clickButton(btn) {
     operation.innerHTML += btn;
@@ -13,6 +19,9 @@ function clearOperation() {
 function calc() {
     if(operation.textContent) {
         result.innerHTML = eval(operation.innerHTML);
+        history.operation = operation.innerHTML;
+        history.result = result.innerHTML;
+        document.querySelector("#history").disabled = false;
     } else {
         result.innerHTML = "Digite...";
     };
@@ -22,7 +31,6 @@ function backSpace() {
     const backspace = operation.innerHTML;
     operation.innerHTML = backspace.substring(0, backspace.length - 1);
 };
-
 
 const check = document.getElementById("check");
 
@@ -34,5 +42,8 @@ check.addEventListener("click", () => {
     document.querySelector("#result").classList.toggle("light");
     document.querySelector(".label").classList.toggle("light");
     document.querySelector(".ball").classList.toggle("light");
-    document.querySelector(".button").classList.toggle("light");
+
+    document.querySelectorAll(".button").forEach(function(button) { 
+        button.classList.toggle("light");
+    });
 } );
