@@ -215,6 +215,10 @@ body.light {
     color: #FFFFFF;
 }
 
+#container-porcentagem.light form {
+    color: #292D36;
+}
+
 #container-porcentagem form input {
     width: 25%;
     outline: none;
