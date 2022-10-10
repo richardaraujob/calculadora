@@ -122,8 +122,35 @@ body.light {
     color: #26F4D0;
 }
 
+.green.light {
+    color: #22ccb0;
+}
+
 .red {
     color: #F47A7A;
+}
+
+.red.light {
+    color: #cf6868;
+}
+
+#history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#history path:last-child {
+    fill: #FFFFFF;
+}
+
+#history.light path:last-child {
+    fill: #292D36;
+}
+
+#history:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 #operation {
