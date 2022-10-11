@@ -243,6 +243,15 @@ body.light {
     border: 1px solid #e4e1e1;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 #container-porcentagem form label {
     margin-right: 5px;
 }
